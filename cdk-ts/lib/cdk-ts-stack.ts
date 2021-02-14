@@ -11,6 +11,7 @@ export class CdkTsStack extends cdk.Stack {
       visibilityTimeout: cdk.Duration.seconds(300)
     });
 
+    //adding new topic
     const topic = new sns.Topic(this, 'CdkTsTopic');
 
     topic.addSubscription(new subs.SqsSubscription(queue));
